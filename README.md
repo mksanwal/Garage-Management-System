@@ -1,40 +1,42 @@
-# 🏦 Banking System CLI
+# 🚗 Garage Management System (SQL)
 
-A menu-driven C++ application that simulates a simple banking system using Object-Oriented Programming (OOP) concepts and persistent file storage.
+## 📌 Overview
+The *Garage Management System* is a relational database project designed to streamline operations in an automobile garage.  
+It covers customer management, vehicles, specialists, workers, service requests, billing, and reporting using SQL concepts like *joins, views, triggers, procedures, and cursors*.
 
----
-
-## 🚀 Features
-
-- 🔐 Secure PIN-based login system
-- 👤 Create new accounts
-- 💰 Deposit & Withdraw money
-- 📄 Transaction history (per user)
-- 📦 Persistent storage using CSV and TXT files
-- 🧱 Built using modular OOP principles:
-  - Abstraction
-  - Inheritance
-  - Polymorphism
-  - Encapsulation
+This project demonstrates *Database Design, Normalization (1NF, 2NF, 3NF), Advanced SQL Queries, Stored Procedures, Triggers, and Views*.
 
 ---
 
+## 🗂 Features
+- *Garage Owner Management* – store owner details.
+- *Customer & Vehicle Records* – track customer info, vehicles, and service history.
+- *Specialists & Workers* – assign expertise and link workers to specialists.
+- *Service Requests* – record vehicle services with cost, type, and status.
+- *Billing System* – generate bills with multiple payment methods.
+- *Advanced SQL Features*:
+  - *Triggers* (auto-update service date, prevent duplicate service, log deleted workers).
+  - *Stored Procedures* (fetch vehicle service history, loop through vehicles with cursors).
+  - *Views* (customer info, vehicle owners, high-value services, revenue insights).
+  - *Subqueries & Joins* (aggregate analysis, dependency checks).
+- *Normalization* – schema follows *1NF, 2NF, 3NF*.
+
 ---
 
-## 🛠 Technologies Used
-
-- C++
-- File Handling (CSV & TXT)
-- Standard Template Library (STL)
+## 🛠 Tech Stack
+- *Database*: MySQL
+- *Concepts*: SQL Joins, Views, Triggers, Procedures, Cursors, Normalization
 
 ---
 
-## 🖥 How to Run
+## 📊 Sample Queries
+- *Aggregate*: Calculate total revenue, average cost, number of vehicles per customer.
+- *Subqueries*: Find customers with high-value services (> ₹5000).
+- *Joins*: Inner, Left, Right, and simulated Full Outer Joins.
+- *Billing*: Auto-generate bills for completed services.
 
-1. Make sure you have a C++ compiler installed (like g++).
-2. Clone or download the project.
-3. Open terminal/command prompt inside the project directory.
-4. Compile the code:
+---
 
-```bash
-g++ src/*.cpp -o bank_system
+## 📌 Example Procedure
+```sql
+CALL GetVehicleServiceHistory('DL3CAP1234');
